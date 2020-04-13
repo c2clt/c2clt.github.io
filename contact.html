@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UV-Compatible" content="ie=edge">
+    <title>WEB222 Store - Contact</title>
+    <!-- Bootstrap CDN -->
+    <link 
+      rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+      crossorigin="anonymous" />
+
+    <!-- Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/18241bf801.js" crossorigin="anonymous"></script>
+
+    <!-- Slick Slider-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- Custom Stylesheet-->
+    <link rel="stylesheet" href="./ccs/style.css">    
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 col-12">
+            <div class="logo">
+              <a href="index.html"><img src="./images/logo.jpg" alt="LOGO"></a>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-12 text-center">
+            <h2 class="my-md-3 site-title text-color">Jessica's Card Buffet</h2>
+          </div>
+          <div class="col-md-4 col-12 text-right">
+            <p class="my-md-4 header-links">
+              <a href="#" class="px-2">Sign In</a>
+              <a href="contact.html" class="px-1">Contact Us</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- First Slider -->
+      <div class="container-fluid p-0">
+        <div class="site-slider">
+          <div class="slider-one">
+            <div>
+              <img src="./images/banner1.jpg" class="img-fluid" alt="Banner 1">
+            </div>
+            <div>
+              <img src="./images/banner2.jpg" class="img-fluid" alt="Banner 2">
+            </div>
+            <div>
+              <img src="./images/banner3.jpg" class="img-fluid" alt="Banner 3">
+            </div>
+          </div>
+
+          <div class="slider-btn">
+            <span class="prev position-top"><i class="fas fa-chevron-left"></i></span>
+            <span class="next position-top right-0"><i class="fas fa-chevron-right"></i></span>
+          </div>
+        </div>
+      </div>
+      <!-- /First Slider -->
+
+    </header>
+    <!-- /header -->
+
+    <main>
+      <!-- form -->
+      <div>
+        <form name = "contact" class="contact-form" 
+        action="https://httpbin.org/post" method="POST">
+          <div class="form-group">
+            <label for="firstname">First name</label>
+            <input class="form-control" id="firstname" name="First name" value="" autofocus required>
+          </div>
+          <div class="form-group">
+            <label for="lastname">Last name</label>
+            <input class="form-control" id="lastname" name="Last name" value="" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email1" name="Email" value="" aria-describedby="emailHelp" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" name="address line 1" value="" placeholder="Address Line 1" required><br />
+            <input type="text" class="form-control" id="address2" name="address line 2" value="" placeholder="Address Line 2">            
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input class="form-control" name="city" id="city" value="" list="cities" 
+            placeholder="Click here to select your city" required>
+            <datalist id="cities">
+              <option value="Ottawa">Ottawa</option>
+              <option value="Toronto">Toronto</option>
+              <option value="Montreal">Montreal</option>
+              <option value="Vancouver">Vancouver</option>
+              <option value="Edmonton">Edmonton</option>
+              <option value="Calgary">Calgary</option>
+              <option value="Winnipeg">Winnipeg</option>
+              <option value="Mississauga">Mississauga</option>
+              <option value="Halifax">Halifax</option>
+              <option value="Markham">Markham</option>
+              <option value="Richmond">Richmond</option>
+              <option value="Windsor">Windsor</option>
+          </datalist>
+          </div>
+          <div class="form-group">
+            <label for="phonenum">Phone number</label>
+            <input type="tel" class="form-control" name="phone number"id="phonenum" value=""
+            pattern="^\d{3}-\d{3}-\d{4}$" placeholder="###-###-####" required>
+          </div>
+          <div class="form-group">
+            <label for="postal">Postal code</label>
+            <input class="form-control" name="postal code" id="postal" value=""
+            pattern= "^([A-Za-z]\d){3}$" placeholder= "e.g. A4A3B3" required>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" name="checkbox" id="checkbox" value="">
+            <label class="form-check-label" for="checkbox">Would you like to be phoned?</label>
+          </div>
+          <div class="myoption">
+            <p>How can I help you today? Please select one of the following: </p>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="radios" id="radios1" value="option1" checked>
+              <label class="form-check-label" for="radios1" onclick="hideOrderNumber()">Question</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="radios" id="radios2" value="option2" >
+              <label class="form-check-label" for="radios2" onclick="hideOrderNumber()">Comment</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="radios" id="radios3" value="option3" >
+              <label class="form-check-label" for="radios3" onclick="createOrderNumber()">Order Problem</label>
+            </div>
+          </div>
+
+          <div class="form-group" id="ordernumber">
+          </div>
+
+          <div class="form-group" id="comment-form">
+            <label for="comment">Please write your comments below: </label>
+            <textarea class="form-control" id="comment" name="comment" value="" cols="30" rows="10" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <input type="hidden" class="form-control" name="myname" value="Jingmin Zhou">
+          </div>
+
+          <input type="submit" class="btn btn-primary" name="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="reset" class="btn btn-primary" name="clear" value="Clear">
+        </form>
+        
+      </div>
+      <!-- /form-->
+      
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <!-- footer Navigation part--> 
+      <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">HOLIDAY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">BIRTHDAY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">VALENTINES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">ANNIVERSARY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">ABOUT US</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="navbar-nav">
+            <a href="https://web.wechat.com/">
+              <li class="nav-item border rounded-circle mx-2 weixin-icon">
+                <i class="fab fa-weixin p-2"></i>
+              </li>
+            </a>
+            <a href="https://www.google.com/gmail/about/">
+              <li class="nav-item border rounded-circle mx-2 google-icon">
+                <i class="fab fa-google p-2"></i>
+              </li>
+            </a>            
+          </div>
+        </nav>
+      </div>
+
+      <!-- footer second part-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-12">
+            <form class="subscribe" action="https://formspree.io/mgelpagg" method="POST">
+              <span>Subscribe to the store's newsletter?</span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="email" name="mail" value="" placeholder="Enter your email address" > 
+              <input type="submit" value="Subscribe">
+            </form>
+          </div>
+          <div class="col-md-4 col-12 text-center shopping-link">
+            <a href="https://www.amazon.ca/"><img src="./images/amazon.jpg" alt="AMOZON"></a>
+            <a href="https://www.walmart.ca/en"><img src="./images/walmart.jpg" alt="WALMART"></a>
+            <a href="https://www.aliexpress.com/"><img src="./images/aliexpress.jpg" alt="AlIEXPRESS"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+          <div class="row">
+            <div class="col-md col-sm text-center">
+              <p class="copyright">
+                Copyright &copy; 2020 Jingmin Zhou | Jessica's Card Buffet | All Rights Reserved
+              </p>
+            </div>
+          </div>
+      </div>
+    </footer>
+    <!-- /footer -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+      crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+      crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="./js/script.js"></script>
+
+  </body>
+</html>
