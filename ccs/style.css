@@ -46,6 +46,7 @@ header .logo img {
 header .site-title {
     font-family: var(--sofia);
     font-weight: bolder;
+    font-size: 3rem;
 }
 
 .container.dropdown-toggle,
@@ -54,9 +55,9 @@ header .site-title {
 }
 
 .header-links a {
-    font-size: 0.9em;
+    font-size: 1.5em;
     text-decoration: none;
-    color: white;
+    color: var(--border);
 }
 
 .myshow {
@@ -248,3 +249,71 @@ footer .navbar-nav .basket-icon {
 .shopping-link img {
     margin: 0 1em;
 }
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+    .site-slider-two {
+        display: none;
+    }
+    header .logo img {
+        width: 10%;
+    }
+    
+    header .site-title {
+        font-size: 2rem;
+    }
+    .header-links a {
+        font-size: 1em;
+    }
+ }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .site-slider-two {
+        display: none;
+    }
+    header .logo img {
+        width: 12%;
+    }
+    
+    header .site-title {
+        font-size: 2.2rem;
+    }
+    .header-links a {
+        font-size: 1.2em;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    header .logo img {
+        width: 40%;
+    }
+    
+    header .site-title {
+        font-size: 2.2rem;
+    }
+    .header-links a {
+        font-size: 1.2em;
+    }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    header .logo img {
+        width: 40%;
+    }
+    
+    header .site-title {
+        font-size: 2.5rem;
+    }
+    .header-links a {
+        font-size: 1.2em;
+    }
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+ }
+
