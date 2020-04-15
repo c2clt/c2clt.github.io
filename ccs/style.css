@@ -129,7 +129,7 @@ header .site-title {
 
 /* Second Slider*/
 .myshow {
-    background-color: var(--text-color);
+    background-color: var(--border);
 }
 .site-slider-two {
     position: relative;
