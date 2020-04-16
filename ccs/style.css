@@ -67,8 +67,9 @@ header .site-title {
 
 }
 /* Slider One*/
-.site-slider {
+.site-slider img {
     position: relative;
+    margin: 0 auto;
 }
 
 .position-top {
